@@ -28,12 +28,6 @@
   	<description></description>
   	<servlet-class>com.mycompany.view.ErrorServlet</servlet-class>
   </servlet>
-  <servlet>
-  	<servlet-name>AddLeagueServlet</servlet-name>
-  	<display-name>AddLeagueServlet</display-name>
-  	<description></description>
-  	<servlet-class>com.mycompany.view.AddLeagueServlet</servlet-class>
-  </servlet>
   <servlet-mapping>
   	<servlet-name>ListAddCustomer</servlet-name>
   	<url-pattern>/list_customer.view</url-pattern>
@@ -49,9 +43,5 @@
   <servlet-mapping>
   	<servlet-name>ErrorServlet</servlet-name>
   	<url-pattern>/error.view</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>AddLeagueServlet</servlet-name>
-  	<url-pattern>/add_league.view</url-pattern>
   </servlet-mapping>
 </web-app>

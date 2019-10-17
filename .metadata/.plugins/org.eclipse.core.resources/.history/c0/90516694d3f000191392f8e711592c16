@@ -52,6 +52,6 @@
   </servlet-mapping>
   <servlet-mapping>
   	<servlet-name>AddLeagueServlet</servlet-name>
-  	<url-pattern>/add_league.view</url-pattern>
+  	<url-pattern>/add_leaguet</url-pattern>
   </servlet-mapping>
 </web-app>
