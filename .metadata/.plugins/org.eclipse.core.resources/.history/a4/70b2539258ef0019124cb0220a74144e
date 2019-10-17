@@ -1,0 +1,5 @@
+package com.mycompany.hibernate_demo_mapping.factory;
+
+public class MyHibernateFactory {
+
+}

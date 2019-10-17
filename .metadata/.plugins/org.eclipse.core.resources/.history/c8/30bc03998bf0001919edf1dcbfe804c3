@@ -1,0 +1,5 @@
+package com.mycompany.hibernate_demo_singletable.table_per_concrete_class;
+
+public class CD {
+
+}

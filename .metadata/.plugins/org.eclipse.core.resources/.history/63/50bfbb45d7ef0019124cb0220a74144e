@@ -1,0 +1,5 @@
+package com.mycompany.hibernate_bidirection.model;
+
+public class CreateDemo {
+
+}

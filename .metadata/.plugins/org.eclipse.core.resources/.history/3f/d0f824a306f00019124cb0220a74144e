@@ -1,0 +1,25 @@
+package com.mycompany.hibernate_demo_singletable.table_per_class;
+
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.PrimaryKeyJoinColumn;
+import javax.persistence.Table;
+
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
+@Entity
+@Table(name = "REGULAR_EMPLOYEE")
+@PrimaryKeyJoinColumn(name = "ID")
+@Data
+@EqualsAndHashCode(callSuper = false)
+public class Regular_Employee extends Labor {
+
+	@Column(name = "salary")
+	private float salary;
+
+	@Column(name = "bonus")
+	private int bonus;
+
+}

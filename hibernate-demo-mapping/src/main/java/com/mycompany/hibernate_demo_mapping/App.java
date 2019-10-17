@@ -1,0 +1,80 @@
+package com.mycompany.hibernate_demo_mapping;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+import com.mycompany.hibernate_demo_mapping.dao.Customer;
+import com.mycompany.hibernate_demo_mapping.dao.Instructor;
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+	public static void main( String[] args )
+    {
+		
+		
+		try {
+    	  SessionFactory factory=new Configuration().configure("hibernate.cfg.xml").
+   			   addAnnotatedClass(Customer.class). addAnnotatedClass(Instructor.class).buildSessionFactory();
+    	  
+   	   Session session=factory.openSession();
+   	 Instructor i = new Instructor();
+   	 
+   	 
+     i.setHobby("sports");
+     i.setYoutube("www.youtube.com");
+   	 session.getTransaction().begin();
+    
+     session.persist(i);
+     session.getTransaction().commit();
+   	   
+   	   
+        Customer c = new Customer();
+       
+        c.setFirstName("ramya");
+        c.setLastName("suvarna");
+        c.setEmail("ram@gmail.com");
+        c.setId_1(i);
+      
+        session.getTransaction().begin();
+        session.persist(c);
+     
+        session.getTransaction().commit();
+        session.close();
+		}
+		catch(Exception e) {
+			
+		}
+		
+		//delete
+		/*
+		SessionFactory factory = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Customer.class)
+				.addAnnotatedClass(Instructor.class).buildSessionFactory();
+		Session session = factory.getCurrentSession();
+		try {
+
+			session.beginTransaction();
+
+			int theId = 1;
+			Customer tempInstructor = session.get(Customer.class, theId);
+
+			System.out.println("Found instructor: " + tempInstructor);
+
+			if (tempInstructor != null) {
+
+				System.out.println("Deleting: " + tempInstructor);
+
+				session.delete(tempInstructor);
+			}
+
+			session.getTransaction().commit();
+
+			System.out.println("Done!");
+		} finally {
+			factory.close();
+		}*/
+        
+    }
+}

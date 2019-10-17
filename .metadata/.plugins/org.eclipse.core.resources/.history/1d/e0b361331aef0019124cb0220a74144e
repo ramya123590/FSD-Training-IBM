@@ -1,0 +1,5 @@
+package com.mycompany.hibernate_demo1.factory;
+
+public class MyHibernateFactory {
+
+}

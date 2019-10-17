@@ -1,0 +1,33 @@
+package com.mycompany.hibernate_crud_demo;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	try {
+        	SessionFactory factory=
+        			new Configuration().configure().
+        			addAnnotatedClass(Employee.class).
+        			buildSessionFactory();
+        	Session session=
+        			factory.getCurrentSession();
+        	Employee employee=new Employee();
+        	employee.setFirstName("John");
+        	employee.setLastName("Doe");
+        	employee.setEmail("john@email.com");
+        	session.getTransaction().begin();
+        	session.persist(employee);
+        	session.getTransaction().commit();
+        	System.out.println("sucess!");
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+    }
+    }
+

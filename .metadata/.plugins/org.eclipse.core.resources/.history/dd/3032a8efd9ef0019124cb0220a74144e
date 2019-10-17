@@ -1,0 +1,5 @@
+package com.mycompany.hibernate_bidirection.one_to_many;
+
+public class Course {
+
+}

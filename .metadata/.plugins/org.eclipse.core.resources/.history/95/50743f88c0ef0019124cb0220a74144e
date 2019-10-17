@@ -1,0 +1,28 @@
+package com.mycompany.hibernate_demo_mapping.factory;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+import com.mycompany.hibernate_demo_mapping.dao.Customer;
+import com.mycompany.hibernate_demo_mapping.dao.Instructor;
+
+
+
+public class MyHibernateFactory {
+	
+	private static SessionFactory factory;
+	
+	
+	public static SessionFactory getMySession()
+	{
+		factory=new Configuration().
+				configure("hibernate.cfg.xml").
+				addAnnotatedClass(Instructor.class)
+				.buildSessionFactory();
+	return factory;
+				
+	}
+	
+
+}

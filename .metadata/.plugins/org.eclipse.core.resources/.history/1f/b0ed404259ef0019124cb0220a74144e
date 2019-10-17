@@ -1,0 +1,36 @@
+package com.mycompany.hibernate_demo_mapping;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+import com.mycompany.hibernate_demo_mapping.dao.Customer;
+import com.mycompany.hibernate_demo_mapping.dao.Instructor;
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+	public static void main( String[] args )
+    {
+    	  SessionFactory factory=new Configuration().configure("hibernate.cfg.xml").
+   			   addAnnotatedClass(Customer.class). addAnnotatedClass(Instructor.class).buildSessionFactory();
+    	  
+   	   Session session=factory.getCurrentSession();
+        Customer c = new Customer();
+        Instructor i = new Instructor();
+        c.setFirstName("ramya");
+        c.setLastName("suvarna");
+        c.setEmail("ram@gmail.com");
+        c.setDetails(i);
+        i.setHobby("sports");
+        i.setYoutube("www.youtube.com");
+        session.getTransaction().begin();
+        session.persist(c);
+        session.persist(i);
+        session.getTransaction().commit();
+        session.close();
+        
+        
+    }
+}

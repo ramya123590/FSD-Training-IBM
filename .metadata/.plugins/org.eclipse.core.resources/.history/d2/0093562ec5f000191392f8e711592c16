@@ -1,0 +1,5 @@
+package customer_servlet_example.model;
+
+public class Customer {
+
+}

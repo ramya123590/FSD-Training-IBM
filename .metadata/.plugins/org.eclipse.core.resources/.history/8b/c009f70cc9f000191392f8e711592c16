@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Duke's Soccer League: Home</title>
+</head>
+<body>
+	<!-- Page Heading -->
+	<table border="1" cellpadding="5" cellspacing="0" width="400">
+		<tr align="center" valign="center" height="20">
+			<td><h3>Customer:Home</h3></td>
+		</tr>
+	</table>
+	<p>This is the Home page for Customer.</p>
+	<h3>Players</h3>
+	<ul>
+		<li><a href="list_customer.view">List all Customer</a></li>
+	
+		<li><a href="register.html">Add a new Customer(TBA)</a></li>
+	</ul>
+</body>
+</html>

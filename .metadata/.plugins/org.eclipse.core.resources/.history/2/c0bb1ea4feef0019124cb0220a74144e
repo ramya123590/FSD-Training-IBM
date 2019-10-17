@@ -1,0 +1,5 @@
+package com.mycompany.hibernate_demo_singletable.mode;
+
+public class Employee {
+
+}

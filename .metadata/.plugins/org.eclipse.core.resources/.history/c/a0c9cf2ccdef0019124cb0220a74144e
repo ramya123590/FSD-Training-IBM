@@ -1,0 +1,24 @@
+package com.mycompany.hibernate_demo_mapping.dao;
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.Data;
+
+@Data
+@Entity
+@Table(name = "instructor_detail")
+public class Instructor {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id_1")
+	private int id_1;
+	private String youtube;
+	private String hobby;
+	
+}
